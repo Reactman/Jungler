@@ -8,10 +8,13 @@ import java.util.List;
 
 public class Page {
 
-	private long total;//总行数
-	private int pageSize = 10;//每页显示的数据记录
-	private int curPage;//当前页
-	private List rows;//储存查询的结果集
+	private long total;//entire data number
+
+	private int pageSize = 10;//how many data should provide each page, 10 by default
+
+	private int curPage;// current page number
+
+	private List rows;//data result
 
 	public long getTotal() {
 		return total;

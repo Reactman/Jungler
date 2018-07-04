@@ -31,9 +31,10 @@ public class SampleRestController {
 
 	@RequestMapping(value = "/sample", method = RequestMethod.GET)
 	public String sayHello() {
-		SQL sql = new SQL();
-		sql.SELECT(Sample.class, "s");
-		sql.FROM(Sample.class, "s");
+		SQL sql = new SQL() {{
+			SELECT(Sample.class, "s");
+			FROM(Sample.class, "s");
+		}};
 		List<Sample> list = sampleRepository.findAll(sql);
 		return "hello world";
 	}

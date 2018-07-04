@@ -16,7 +16,7 @@ import java.util.List;
  * @author TC.Ubuntu
  * @since 2018/6/9.
  */
-public interface BaseRepository<E extends BaseEntity, ID extends Serializable> extends JpaRepository<E, ID > {
+public interface BaseRepository<E extends BaseEntity, ID extends Serializable> extends JpaRepository<E, ID> {
 
 	List<E> findAll(SQL sql);
 
