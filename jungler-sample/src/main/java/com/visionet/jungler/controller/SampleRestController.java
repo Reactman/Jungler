@@ -36,6 +36,7 @@ public class SampleRestController {
 			FROM(Sample.class, "s");
 		}};
 		List<Sample> list = sampleRepository.findAll(sql);
+
 		return "hello world";
 	}
 }
